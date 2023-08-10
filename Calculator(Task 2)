@@ -1,0 +1,40 @@
+'''
+
+                            TASK # 02
+                            Calculator
+        Design a simple calculator with basic arithmetic operations.
+        Prompt the user to input two numbers and an operation choice.
+                Perform the calculation and display the result.
+
+'''
+
+# Obtain the first number from the user
+num1 = float(input("Enter the first number: "))
+print(int(num1))
+
+# Obtain the Operator from the User
+operator = input("Enter the arithmetic operator from following list (+, -, *, /, ^): ")
+print(int(num1), operator)
+
+num2 = float(input("Enter the second number: "))
+print(int(num1), operator, int(num2))
+# Perform the requested arithmetic operation
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    # Useing Nested if to handle division by zero
+    if num2 == 0:
+        result = "Math Error"
+    else:
+        result = num1 / num2
+elif operation == "^":
+    result = num1 ** num2
+else:
+    result = "Invalid operation"
+
+# Display the Output
+print("Output:", result)
